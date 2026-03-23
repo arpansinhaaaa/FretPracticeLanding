@@ -61,9 +61,10 @@ fretpractice-app/
 ├── api/
 │   └── tweets.ts         ← Vercel serverless function (Twitter API)
 ├── public/
-│   ├── fretpractice-logo.png   ← your logo
+│   ├── fretpractice_logo.svg   ← your logo
 │   ├── rivu.jpeg               ← founder photo
-│   └── favicon.svg
+│   ├── favicon.svg
+│   ├── logo 1.png              ← additional logo variant
 ├── src/
 │   ├── App.tsx           ← entire app (single file)
 │   └── main.tsx

@@ -24,19 +24,19 @@ interface ModalState { name:string; email:string; whatsapp:string; countryCode:s
 
 // ─── MOCK TWEETS ────────────────────────────────────────────────────
 const MOCK_TWEETS: Tweet[] = [
-  { id:'1', author:'FretPractice', handle:'@FretPractice', avatar:'/fretpractice-logo.png',
+  { id:'1', author:'FretPractice', handle:'@FretPractice', avatar:'/fretpractice_logo.svg',
     text:'Structured practice > random noodling. Every session in FretPractice has a goal, a feedback loop, and a measurable outcome. Building the system guitarists actually need.',
     date:'Mar 18', likes:24, retweets:8 },
   { id:'2', author:'Rivu Chakraborty', handle:'@rivuchakraborty', avatar:'/rivu.jpeg',
     text:"Been playing guitar for 18 years. Still remember the frustration of not knowing if I was improving. That feeling is exactly why I\'m building @FretPractice.",
     date:'Mar 15', likes:61, retweets:12 },
-  { id:'3', author:'FretPractice', handle:'@FretPractice', avatar:'/fretpractice-logo.png',
+  { id:'3', author:'FretPractice', handle:'@FretPractice', avatar:'/fretpractice_logo.svg',
     text:"Real-time audio feedback is live in internal testing. You play a note — FretPractice tells you if it\'s right instantly. No more guessing. No more bad habits going unnoticed.",
     date:'Mar 12', likes:43, retweets:9 },
   { id:'4', author:'Rivu Chakraborty', handle:'@rivuchakraborty', avatar:'/rivu.jpeg',
     text:'Why do most guitar apps fail? They give you tools but no structure. A metronome is useless without a practice plan. @FretPractice fixes this.',
     date:'Mar 9', likes:89, retweets:21 },
-  { id:'5', author:'FretPractice', handle:'@FretPractice', avatar:'/fretpractice-logo.png',
+  { id:'5', author:'FretPractice', handle:'@FretPractice', avatar:'/fretpractice_logo.svg',
     text:'Dhun — our AI music engine — can now generate backing tracks in any key and tempo. Practice with real music context, not just a click track. Coming soon to early access.',
     date:'Mar 6', likes:55, retweets:14 },
   { id:'6', author:'Rivu Chakraborty', handle:'@rivuchakraborty', avatar:'/rivu.jpeg',
@@ -841,7 +841,9 @@ function WaitlistModal({open,onClose}:{open:boolean;onClose:()=>void}){
         style={{background:'linear-gradient(145deg,#111827,#0a0d17)',border:'1px solid rgba(255,255,255,0.1)',borderRadius:24,padding:isMobile?28:48,maxWidth:560,width:'100%',maxHeight:'90vh',overflowY:'auto',position:'relative',animation:'slideUp .3s ease',boxShadow:'0 40px 120px rgba(0,0,0,0.6),0 0 60px rgba(37,89,244,0.1)'}}>
         <button onClick={onClose} style={{position:'absolute',top:16,right:16,width:32,height:32,borderRadius:'50%',background:'rgba(255,255,255,0.05)',border:'1px solid rgba(255,255,255,0.1)',color:'rgba(255,255,255,0.6)',cursor:'pointer',display:'flex',alignItems:'center',justifyContent:'center',fontSize:18}}>×</button>
         <div style={{textAlign:'center',marginBottom:32}}>
-          <div style={{width:56,height:56,borderRadius:16,background:'rgba(37,89,244,0.12)',border:'1px solid rgba(37,89,244,0.25)',display:'flex',alignItems:'center',justifyContent:'center',margin:'0 auto 20px',fontSize:22}}>🎸</div>
+          <div style={{width:56,height:56,borderRadius:16,background:'rgba(37, 89, 244, 0.18)',border:'1px solid rgba(37, 89, 244, 0.35)',display:'flex',alignItems:'center',justifyContent:'center',margin:'0 auto 20px'}}>
+            <img src="/logo 1.png" alt="FretPractice" style={{width:32,height:32,objectFit:'contain'}} />
+          </div>
           <h3 style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:isMobile?28:34,fontWeight:400,lineHeight:1.1,letterSpacing:'0.04em',color:'#fff',marginBottom:12}}>Join the Waitlist</h3>
           <p style={{fontFamily:"'DM Sans',sans-serif",fontSize:14,lineHeight:1.6,color:'rgba(255,255,255,0.55)',fontWeight:300}}>Be the first to know when FretPractice launches. Get exclusive early access pricing.</p>
         </div>
@@ -900,7 +902,7 @@ function WaitlistSection({onOpen}:{onOpen:()=>void}){
           <h2 style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:'clamp(44px,7vw,96px)',fontWeight:400,lineHeight:0.92,letterSpacing:'0.04em',color:'#fff',marginBottom:22}}>Start practicing<br/>with intention.</h2>
           <p style={{fontFamily:"'DM Sans',sans-serif",fontSize:16,color:'rgba(255,255,255,0.44)',marginBottom:52,fontWeight:300}}>Join the waitlist. Get early access. Move forward.</p>
           <BtnBlue onClick={onOpen} style={{maxWidth:280,margin:'0 auto'}}>Join Waitlist →</BtnBlue>
-          <p style={{fontFamily:"'DM Sans',sans-serif",fontSize:11.5,color:'rgba(255,255,255,0.22)',marginTop:16,letterSpacing:'0.03em'}}>No spam. Unsubscribe anytime. Early access = founder pricing.</p>
+          <p style={{fontFamily:"'DM Sans',sans-serif",fontSize:11.5,color:'rgba(255,255,255,0.22)',marginTop:16,letterSpacing:'0.03em'}}>Get early access with founder pricing. No spam. Unsubscribe anytime.</p>
         </Reveal>
       </div>
     </section>
@@ -939,7 +941,7 @@ function Footer(){
     <footer style={{background:'#000',borderTop:'1px solid rgba(255,255,255,0.07)',padding:isMobile?'50px 20px 30px':'70px 52px 42px'}}>
       <div style={{display:'grid',gridTemplateColumns:isMobile?'1fr 1fr':'280px 1fr 1fr 1fr',gap:isMobile?32:60,maxWidth:1100,margin:'0 auto',marginBottom:60}}>
         <div style={{gridColumn:isMobile?'1/-1':'auto'}}>
-          <img src={LOGO_SRC} alt="FretPractice" style={{height:44,width:'auto',objectFit:'contain',marginBottom:16,filter:'drop-shadow(0 0 7px rgba(37,89,244,0.4))'}}/>
+          <img src={LOGO_SRC} alt="FretPractice" style={{height:74,width:'auto',objectFit:'contain',marginBottom:16,filter:'drop-shadow(0 0 7px rgba(37,89,244,0.4))'}}/>
           <p style={{fontFamily:"'DM Sans',sans-serif",fontSize:13,color:'rgba(255,255,255,0.28)',lineHeight:1.65,maxWidth:220,marginBottom:22}}>AI-powered guitar practice. Structured sessions. Real progress.</p>
           <div style={{display:'flex',gap:8}}>{SOCIALS.map(s=><SocialBtn key={s.label} s={s}/>)}</div>
         </div>
@@ -956,7 +958,7 @@ function Footer(){
           <div style={{fontFamily:"'DM Sans',sans-serif",fontSize:11,fontWeight:500,letterSpacing:'0.1em',textTransform:'uppercase',color:'rgba(255,255,255,0.28)',marginBottom:18}}>Company</div>
           <ul style={{listStyle:'none',padding:0,margin:0,display:'flex',flexDirection:'column',gap:12}}>
             <li><FLink id="founder">About</FLink></li>
-            <li><FLink href="mailto:fretpractice@mobrio.studio">fretpractice@mobrio.studio</FLink></li>
+           
             <li><FLink href="#">Privacy Policy</FLink></li>
             <li><FLink href="#">Terms of Use</FLink></li>
           </ul>
